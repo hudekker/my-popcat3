@@ -7,6 +7,10 @@ let popcat2 = document.querySelector("#popcat2");
 let audio = document.querySelector("#audio");
 let mobile = false;
 
+let cssVar = (val) => {
+  return getComputedStyle(document.querySelector(":root")).getPropertyValue(val);
+};
+
 const sleep = (ms) => {
   return new Promise((resolve) => setTimeout(resolve, ms));
 };
@@ -30,6 +34,21 @@ let changeColor = (myThis) => {
   let myColor = myThis.id;
   console.log(myColor);
   myBody.style.backgroundColor = myColor;
+
+  switch (myColor) {
+    case "green":
+      myBody.style.backgroundColor = cssVar("--dracula-green");
+      break;
+    case "blue":
+      myBody.style.backgroundColor = cssVar("--dracula-dark-blue");
+      break;
+    case "red":
+      myBody.style.backgroundColor = cssVar("--dracula-red");
+      break;
+
+    default:
+      break;
+  }
 };
 
 let handleMouseDown = (event) => {
@@ -69,8 +88,8 @@ let handleTouchStart = (event) => {
 let handleTouchEnd = (event) => {
   (async () => {
     await sleep(100);
-    audio = "";
-    audio = document.querySelector("#audio");
+    // audio = "";
+    // audio = document.querySelector("#audio");
     num++;
     displayNum.innerText = "Popcat clicked: " + num;
     popcat1.classList.remove("no-display");

@@ -5,6 +5,31 @@
   /* font-family: "Indie Flower"; */
 }
 
+:root {
+  --dracula-dark-black: #282a36;
+  --dracula-black: #44475a;
+  --dracula-white: #f8f8f2;
+  --dracula-dark-blue: #6272a4;
+  --dracula-light-blue: #8be9fd;
+  --dracula-green: #50fa7b;
+  --dracula-orange: #ffb86c;
+  --dracula-pink: #ff79c6;
+  --dracula-red: #ff5555;
+  --dracula-yellow: #f1fa8c;
+
+  --pic-color: var(--dracula-yellow);
+}
+
+.dracula-dark-blue {
+  background-color: #6272a4;
+}
+.dracula-green {
+  background-color: #50fa7b;
+}
+.dracula-red {
+  background-color: #ff5555;
+}
+
 h1,
 h2,
 h3,
