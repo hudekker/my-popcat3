@@ -32,17 +32,17 @@ let changeColor = (myThis) => {
   myBody.style.backgroundColor = myColor;
 };
 
-let mouseDown = (event) => {
+let handleMouseDown = (event) => {
   if (mobile == false) {
     popcat1.classList.add("no-display");
     popcat2.classList.remove("no-display");
     audio.play();
 
-    popcatGroup.addEventListener("mouseup", mouseUp);
+    popcatGroup.addEventListener("mouseup", handleMouseUp);
   }
 };
 
-let mouseUp = (event) => {
+let handleMouseUp = (event) => {
   if (mobile == false) {
     (async () => {
       await sleep(100);
@@ -50,21 +50,28 @@ let mouseUp = (event) => {
       displayNum.innerText = "Popcat clicked: " + num;
       popcat1.classList.remove("no-display");
       popcat2.classList.add("no-display");
-      popcatGroup.removeEventListener("mouseup", mouseUp);
+      popcatGroup.removeEventListener("mouseup", handleMouseUp);
     })();
   }
 };
 
-popcatGroup.addEventListener("touchstart", (event) => {
+// popcatGroup.addEventListener("touchstart", handleTouchstart);
+
+let handleTouchStart = (event) => {
   popcat1.classList.add("no-display");
   popcat2.classList.remove("no-display");
   audio.play();
-});
 
-popcatGroup.addEventListener("touchend", (event) => {
-  num++;
-  displayNum.innerText = "Popcat clicked: " + num;
-  popcat1.classList.remove("no-display");
-  popcat2.classList.add("no-display");
-  audio = document.querySelector("#audio");
-});
+  popcatGroup.addEventListener("touchend", handleTouchEnd);
+};
+
+let handleTouchEnd = (event) => {
+  (async () => {
+    await sleep(100);
+    num++;
+    displayNum.innerText = "Popcat clicked: " + num;
+    popcat1.classList.remove("no-display");
+    popcat2.classList.add("no-display");
+    popcatGroup.removeEventListener("touchend", handleTouchEnd);
+  })();
+};
