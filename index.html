@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Popcat</title>
+  <link rel="shortcut icon" href="icon512.png" type="image/x-icon">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&family=Poppins:wght@300&display=swap');
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- start here  -->
+  <div class="container col">
+
+    <h1 id="num-clicked">Welcome to my Popcat</h1>
+
+    <div class="popcat-group" onmousedown="mouseDown(event)" onmouseup="mouseUp(event)">
+      <img id="popcat1" class="display" src="https://hudekker.github.io/my-popcat/popcat1.png" alt="">
+      <img id="popcat2" class="no-display" src="https://hudekker.github.io/my-popcat/popcat2.png" alt="">
+    </div>
+
+    <div class="btn-group ">
+      <button id="green" class="btn btn-green" onclick="changeColor(this)">綠色</button>
+      <button id="blue" class="btn btn-blue" onclick="changeColor(this)">藍色</button>
+      <button id="red" class="btn btn-red" onclick="changeColor(this)">紅色</button>
+    </div>
+  </div>
+
+  <audio id="audio" src="https://hudekker.github.io/my-popcat/popcat-sound.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
