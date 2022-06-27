@@ -68,9 +68,9 @@ let handleTouchStart = (event) => {
 
 let handleTouchEnd = (event) => {
   (async () => {
+    await sleep(100);
     audio = "";
     audio = document.querySelector("#audio");
-    await sleep(100);
     num++;
     displayNum.innerText = "Popcat clicked: " + num;
     popcat1.classList.remove("no-display");

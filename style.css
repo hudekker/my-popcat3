@@ -55,14 +55,25 @@ body {
   background-color: green;
 }
 
+/* --dracula-dark-blue: #6272a4;
+--dracula-light-blue: #8be9fd;
+--dracula-green: #50fa7b;
+--dracula-orange: #ffb86c;
+--dracula-pink: #ff79c6;
+--dracula-red: #ff5555;
+--dracula-yellow: #f1fa8c; */
+
 .btn-green {
   background-color: green;
+  background-color: #50fa7b;
 }
 .btn-red {
   background-color: red;
+  background-color: #ff5555;
 }
 .btn-blue {
   background-color: blue;
+  background-color: #6272a4;
 }
 
 .no-display {
