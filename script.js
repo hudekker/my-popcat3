@@ -7,6 +7,10 @@ let popcat2 = document.querySelector("#popcat2");
 let audio = document.querySelector("#audio");
 let mobile = false;
 
+const sleep = (ms) => {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+};
+
 let checkMobile = () => {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     // true for mobile device
@@ -33,15 +37,21 @@ let mouseDown = (event) => {
     popcat1.classList.add("no-display");
     popcat2.classList.remove("no-display");
     audio.play();
+
+    popcatGroup.addEventListener("mouseup", mouseUp);
   }
 };
 
 let mouseUp = (event) => {
   if (mobile == false) {
-    num++;
-    displayNum.innerText = "Popcat clicked: " + num;
-    popcat1.classList.remove("no-display");
-    popcat2.classList.add("no-display");
+    (async () => {
+      await sleep(100);
+      num++;
+      displayNum.innerText = "Popcat clicked: " + num;
+      popcat1.classList.remove("no-display");
+      popcat2.classList.add("no-display");
+      popcatGroup.removeEventListener("mouseup", mouseUp);
+    })();
   }
 };
 
