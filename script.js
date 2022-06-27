@@ -60,6 +60,7 @@ let handleMouseUp = (event) => {
 let handleTouchStart = (event) => {
   popcat1.classList.add("no-display");
   popcat2.classList.remove("no-display");
+  audio.load();
   audio.play();
 
   popcatGroup.addEventListener("touchend", handleTouchEnd);
