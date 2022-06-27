@@ -34,21 +34,6 @@ let changeColor = (myThis) => {
   let myColor = myThis.id;
   console.log(myColor);
   myBody.style.backgroundColor = myColor;
-
-  switch (myColor) {
-    case "green":
-      myBody.style.backgroundColor = cssVar("--dracula-green");
-      break;
-    case "blue":
-      myBody.style.backgroundColor = cssVar("--dracula-dark-blue");
-      break;
-    case "red":
-      myBody.style.backgroundColor = cssVar("--dracula-red");
-      break;
-
-    default:
-      break;
-  }
 };
 
 let handleMouseDown = (event) => {
@@ -74,8 +59,6 @@ let handleMouseUp = (event) => {
   }
 };
 
-// popcatGroup.addEventListener("touchstart", handleTouchstart);
-
 let handleTouchStart = (event) => {
   popcat1.classList.add("no-display");
   popcat2.classList.remove("no-display");
@@ -87,9 +70,7 @@ let handleTouchStart = (event) => {
 
 let handleTouchEnd = (event) => {
   (async () => {
-    await sleep(100);
-    // audio = "";
-    // audio = document.querySelector("#audio");
+    await sleep(10);
     num++;
     displayNum.innerText = "Popcat clicked: " + num;
     popcat1.classList.remove("no-display");
