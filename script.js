@@ -60,8 +60,7 @@ let handleMouseUp = (event) => {
 let handleTouchStart = (event) => {
   popcat1.classList.add("no-display");
   popcat2.classList.remove("no-display");
-  audio = "";
-  audio = document.querySelector("#audio");
+
   audio.play();
 
   popcatGroup.addEventListener("touchend", handleTouchEnd);
@@ -69,6 +68,8 @@ let handleTouchStart = (event) => {
 
 let handleTouchEnd = (event) => {
   (async () => {
+    audio = "";
+    audio = document.querySelector("#audio");
     await sleep(100);
     num++;
     displayNum.innerText = "Popcat clicked: " + num;
