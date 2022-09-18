@@ -1,51 +1,66 @@
-   .container {
-     margin-top: 20px;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-   }
+.container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-   .no-display {
-     display: hidden;
-   }
+.no-display {
+  display: hidden;
+}
 
-   .btn-group {
-     margin: 20px;
-     background-color: ivory;
-     border: solid black;
-     border-radius: 20px;
-     padding: 10px;
-   }
+.btn-group {
+  margin: 20px;
+  background-color: ivory;
+  border: solid black;
+  border-radius: 20px;
+  padding: 10px;
+}
 
-   .btn {
-     min-width: 80px;
-     margin: 10px;
-     padding: 10px;
-     font-size: 16px;
-     border-radius: 10px;
-     cursor: pointer;
-     color: white;
-   }
+.btn {
+  min-width: 80px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}
 
-   body {
-     width: 100vw;
-     height: 100vh;
-     background-color: ivory;
-   }
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: ivory;
+}
 
-   .btn-green {
-     background-color: green;
-   }
+.btn-green {
+  background-color: green;
+}
 
-   .btn-red {
-     background-color: red;
-   }
+.btn-red {
+  background-color: red;
+}
 
-   .btn-blue {
-     background-color: blue;
-   }
+.btn-blue {
+  background-color: blue;
+}
 
-   .no-display {
-     display: none;
-   }
+.no-display {
+  display: none;
+}
+
+#popcat-open:not(.no-display) {
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+@keyframes animatetop {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-20px);
+  }
+}
