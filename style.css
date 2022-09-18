@@ -52,7 +52,7 @@ body {
 
 #popcat-open:not(.no-display) {
   animation-name: animatetop;
-  animation-duration: 0.4s;
+  animation-duration: 0.2s;
 }
 
 @keyframes animatetop {
