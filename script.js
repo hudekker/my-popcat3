@@ -21,9 +21,9 @@ poppycatClose.addEventListener("click", (event) => {
   setTimeout(() => {
     poppycatClose.classList.remove("no-display");
     poppycatOpen.classList.add("no-display");
-    audio.pause();
+    // audio.pause();
     audio.currentTime = 0;
-  }, 1000);
+  }, 800);
 });
 
 btnGreen.addEventListener("click", (event) => {
