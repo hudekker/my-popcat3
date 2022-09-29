@@ -41,20 +41,16 @@ poppycatClose.addEventListener("click", (event) => {
     poppycatOpen.classList.add("no-display");
     audio.pause();
     audio.currentTime = 0;
-  }, 100);
+  }, 200);
 });
 
 btnGreen.addEventListener("click", (event) => {
-  // body.classList.add("btn-green");
   body.style.backgroundColor = "aquamarine";
-  // numClicked.style.color = "black";
 });
 // });
 btnRed.addEventListener("click", (event) => {
   body.style.backgroundColor = "lightcoral";
-  // numClicked.style.color = "white";
 });
 btnBlue.addEventListener("click", (event) => {
   body.style.backgroundColor = "lightskyblue";
-  // numClicked.style.color = "white";
 });

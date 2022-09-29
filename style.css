@@ -70,14 +70,12 @@ img {
 
 @keyframes animatetop {
   from {
-    /* transform: scale(1, 1); */
     /* transform: translateY(0); */
     transform: translate(0, 0);
   }
 
   to {
-    /* transform: scale(2, 2); */
     /* transform: translateY(-100px); */
-    transform: translate(-20px, -100px);
+    transform: translate(-5px, -50px);
   }
 }
