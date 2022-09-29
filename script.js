@@ -1,55 +1,60 @@
 let num = 0;
 let numClicked = document.querySelector("#num-clicked");
 let body = document.querySelector("body");
-let popcatClose = document.querySelector("#popcat-close");
-let popcatOpen = document.querySelector("#popcat-open");
+let poppycatClose = document.querySelector("#poppycat-close");
+let poppycatOpen = document.querySelector("#poppycat-open");
 let btnGreen = document.querySelector("#btn-green");
 let btnRed = document.querySelector("#btn-red");
 let btnBlue = document.querySelector("#btn-blue");
 let audio = document.querySelector("#audio");
 
 // // Advanced options
-// let popcatOpenMouseUp = (event) => {
-//   popcatClose.classList.remove("no-display");
-//   popcatOpen.classList.add("no-display");
+// let poppycatOpenMouseUp = (event) => {
+//   poppycatClose.classList.remove("no-display");
+//   poppycatOpen.classList.add("no-display");
 //   audio.play();
 
 //   num = num + 1;
 //   numClicked.innerText = "打了 " + num.toLocaleString() + "次";
 
-//   popcatOpen.removeEventListener("mouseup", popcatOpenMouseUp);
+//   poppycatOpen.removeEventListener("mouseup", poppycatOpenMouseUp);
 // };
 
-// popcatClose.addEventListener("mousedown", (event) => {
-//   popcatClose.classList.add("no-display");
-//   popcatOpen.classList.remove("no-display");
+// poppycatClose.addEventListener("mousedown", (event) => {
+//   poppycatClose.classList.add("no-display");
+//   poppycatOpen.classList.remove("no-display");
 
-//   popcatOpen.addEventListener("mouseup", popcatOpenMouseUp);
+//   poppycatOpen.addEventListener("mouseup", poppycatOpenMouseUp);
 // });
 
 // Basic Option
-popcatClose.addEventListener("click", (event) => {
-  popcatClose.classList.add("no-display");
-  popcatOpen.classList.remove("no-display");
+poppycatClose.addEventListener("click", (event) => {
+  poppycatClose.classList.add("no-display");
+  poppycatOpen.classList.remove("no-display");
   audio.play();
 
   num = num + 1;
-  numClicked.innerText = "打了 " + num.toLocaleString() + "次";
+  numClicked.innerText = "被打了 " + num.toLocaleString() + "次";
 
   setTimeout(() => {
-    popcatClose.classList.remove("no-display");
-    popcatOpen.classList.add("no-display");
+    poppycatClose.classList.remove("no-display");
+    poppycatOpen.classList.add("no-display");
     audio.pause();
     audio.currentTime = 0;
   }, 100);
 });
 
 btnGreen.addEventListener("click", (event) => {
-  body.style.backgroundColor = "green";
+  // body.classList.add("btn-green");
+  body.style.backgroundColor = "aquamarine";
+  // numClicked.style.color = "black";
 });
+// });
 btnRed.addEventListener("click", (event) => {
-  body.style.backgroundColor = "red";
+  body.style.backgroundColor = "lightcoral";
+  // numClicked.style.color = "white";
 });
 btnBlue.addEventListener("click", (event) => {
-  body.style.backgroundColor = "blue";
+  body.style.backgroundColor = "lightskyblue";
+  // numClicked.style.color = "white";
 });
