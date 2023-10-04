@@ -35,7 +35,9 @@ btnRed.addEventListener("click", (event) => {
 });
 btnBlue.addEventListener("click", (event) => {
   body.style.backgroundColor = "lightskyblue";
-});
+})
+
+
 
 // // Advanced options
 // let poppycatOpenMouseUp = (event) => {
@@ -54,4 +56,5 @@ btnBlue.addEventListener("click", (event) => {
 //   poppycatOpen.classList.remove("no-display");
 
 //   poppycatOpen.addEventListener("mouseup", poppycatOpenMouseUp);
-// });
+// 
+

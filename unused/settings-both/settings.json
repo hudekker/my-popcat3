@@ -1,0 +1,31 @@
+{
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "Dracula Soft",
+  "editor.fontSize": 16,
+  "editor.suggest.snippetsPreventQuickSuggestions": true,
+  "javascript.suggest.classMemberSnippets.enabled": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "files.associations": {
+    "*.html": "html",
+    "*.ejs": "html",
+    "*.hbs": "html",
+    "*.js": "javascript",
+    "*.mustache": "html",
+    "*.handlebars": "html"
+  },
+  "emmet.syntaxProfiles": {
+    "html": {
+      "inline_break": 1
+    }
+  },
+  "emmet.preferences": {
+    "output.inlineBreak": 1
+  },
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.indentSize": "tabSize",
+  "javascript.format.placeOpenBraceOnNewLineForControlBlocks": false,
+  "javascript.format.placeOpenBraceOnNewLineForFunctions": false,
+  "editor.linkedEditing": true,
+  "editor.acceptSuggestionOnCommitCharacter": false
+}
