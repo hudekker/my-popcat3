@@ -1,7 +1,15 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200&display=swap');
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Ma+Shan+Zheng&family=Noto+Serif+TC&display=swap');
+
 * {
   box-sizing: border-box;
   margin-left: 0;
+  font-family: 'Noto Serif TC', serif;
+  font-family: 'Ma Shan Zheng', cursive;
 }
+
 
 .container {
   display: flex;
@@ -43,6 +51,7 @@ img {
   max-height: 60vh;
   height: 60vh;
 }
+
 .btn-green {
   /* background-color: green; */
   background-color: aquamarine;
