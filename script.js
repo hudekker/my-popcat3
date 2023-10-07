@@ -9,18 +9,22 @@ let btnGreen = document.querySelector("#btn-green");
 let btnRed = document.querySelector("#btn-red");
 let btnBlue = document.querySelector("#btn-blue");
 
+// Toggle
+let toggleHideMe = () => {
+  poppycatOpen.classList.toggle('hide-me')
+  poppycatClose.classList.toggle('hide-me')
+}
+
 // Basic Option
 poppycatClose.addEventListener("click", (event) => {
-  poppycatClose.classList.add("no-display");
-  poppycatOpen.classList.remove("no-display");
+  toggleHideMe();
   audio.play();
 
   num = num + 1;
   numClicked.innerText = "被打了 " + num.toLocaleString() + "次";
 
   setTimeout(() => {
-    poppycatClose.classList.remove("no-display");
-    poppycatOpen.classList.add("no-display");
+    toggleHideMe();
     // audio.pause();
     audio.currentTime = 0;
   }, 800);
@@ -29,7 +33,6 @@ poppycatClose.addEventListener("click", (event) => {
 btnGreen.addEventListener("click", (event) => {
   body.style.backgroundColor = "aquamarine";
 });
-// });
 btnRed.addEventListener("click", (event) => {
   body.style.backgroundColor = "lightcoral";
 });
@@ -41,8 +44,8 @@ btnBlue.addEventListener("click", (event) => {
 
 // // Advanced options
 // let poppycatOpenMouseUp = (event) => {
-//   poppycatClose.classList.remove("no-display");
-//   poppycatOpen.classList.add("no-display");
+//   poppycatClose.classList.remove("hide-me");
+//   poppycatOpen.classList.add("hide-me");
 //   audio.play();
 
 //   num = num + 1;
@@ -52,8 +55,8 @@ btnBlue.addEventListener("click", (event) => {
 // };
 
 // poppycatClose.addEventListener("mousedown", (event) => {
-//   poppycatClose.classList.add("no-display");
-//   poppycatOpen.classList.remove("no-display");
+//   poppycatClose.classList.add("hide-me");
+//   poppycatOpen.classList.remove("hide-me");
 
 //   poppycatOpen.addEventListener("mouseup", poppycatOpenMouseUp);
 // 

@@ -50,38 +50,32 @@ img {
 }
 
 .btn-green {
-  /* background-color: green; */
   background-color: aquamarine;
 }
 
 .btn-red {
   background-color: lightcoral;
-  /* color: white; */
 }
 
 .btn-blue {
   background-color: lightskyblue;
-  /* color: white; */
 }
 
-.no-display {
+.hide-me {
   display: none;
 }
 
 #poppycat-open {
-  /* #poppycat-open:not(.no-display) { */
   animation-name: animatetop;
   animation-duration: 0.8s;
 }
 
 @keyframes animatetop {
   from {
-    /* transform: translateY(0); */
     transform: translate(0, 0);
   }
 
   to {
-    /* transform: translateY(-100px); */
     transform: translate(-5px, -50px);
   }
 }
